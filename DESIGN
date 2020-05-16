@@ -1,0 +1,23 @@
+Main:
+
+  Calls different functions for IO and initialization
+
+Parser:
+
+  Parses command line arguments into their relevant flags, and parses the expression into its struct
+
+IOfuncs:
+
+  Functions which build lines to print and controls input/output from STDIN/STDOUT
+
+Expression:
+
+  This module contains the expression struct, and functions which operate on the struct
+
+FindMatch:
+
+  Conatains functions which determine if there is a match in the current line or not according to the flags.
+
+UpdateLineParams:
+
+  Module which updates all the paramaters that are defined for each line of text, most modules use these parameters.

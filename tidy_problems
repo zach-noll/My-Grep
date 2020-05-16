@@ -1,0 +1,33 @@
+4 warnings and 2 errors generated.
+Error while processing /a/home/cc/students/csguests/zacharynoll/c_lab/ex2/IOfuncs.c.
+9 warnings and 5 errors generated.
+Error while processing /a/home/cc/students/csguests/zacharynoll/c_lab/ex2/main.c.
+9 warnings and 5 errors generated.
+Error while processing /a/home/cc/students/csguests/zacharynoll/c_lab/ex2/Parser.c.
+10 warnings and 6 errors generated.
+Error while processing /a/home/cc/students/csguests/zacharynoll/c_lab/ex2/StructTools.c.
+/a/home/cc/students/csguests/zacharynoll/c_lab/ex2/FindMatch.c:61:6: warning: function 'is_match_in_place' exceeds recommended size/complexity thresholds [google-readability-function-size]
+bool is_match_in_place(char *text, Expression_t *parsed_expression)
+     ^
+/a/home/cc/students/csguests/zacharynoll/c_lab/ex2/FindMatch.c:61:6: note: 59 lines including whitespace and comments (threshold 50)
+/a/home/cc/students/csguests/zacharynoll/c_lab/ex2/FindMatch.c:108:59: note: nesting level 5 starts here (threshold 4)
+        if ((*text) < range_start || (*text) > range_end) {
+                                                          ^
+/a/home/cc/students/csguests/zacharynoll/c_lab/ex2/Parser.h:6:1: error: unknown type name 'Expression_t' [clang-diagnostic-error]
+Expression_t *ParseExpression(struct in_flags *flags, char *expression_string);
+^
+/a/home/cc/students/csguests/zacharynoll/c_lab/ex2/Parser.h:8:47: error: unknown type name 'Line_Params' [clang-diagnostic-error]
+void BuildLineToPrint(struct in_flags *flags, Line_Params text_parameters, char *line_to_print);
+                                              ^
+/a/home/cc/students/csguests/zacharynoll/c_lab/ex2/IOfuncs.h:4:16: error: unknown type name 'Expression_t' [clang-diagnostic-error]
+void ReadLines(Expression_t *parsed_expression_array, char *filename, struct in_flags *flags, char *A_num, char *exp);
+               ^
+/a/home/cc/students/csguests/zacharynoll/c_lab/ex2/Parser.h:6:1: error: unknown type name 'Expression_t' [clang-diagnostic-error]
+Expression_t *ParseExpression(struct in_flags *flags, char *expression_string);
+^
+/a/home/cc/students/csguests/zacharynoll/c_lab/ex2/Parser.h:8:47: error: unknown type name 'Line_Params' [clang-diagnostic-error]
+void BuildLineToPrint(struct in_flags *flags, Line_Params text_parameters, char *line_to_print);
+                                              ^
+/a/home/cc/students/csguests/zacharynoll/c_lab/ex2/FindMatch.h:4:57: error: unknown type name 'Expression_t' [clang-diagnostic-error]
+char *IsMatchInLine(struct in_flags *flags, char *text, Expression_t *parsed_expression_array);
+                                                        ^

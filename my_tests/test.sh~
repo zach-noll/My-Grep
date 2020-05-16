@@ -1,0 +1,77 @@
+#! /usr/bin/env bash
+
+
+gcc main.c -std=c99 -g -o my_grep
+
+~nimrodav/grep_tests/beta1.sh
+
+grep -c an ~shohami/c_lab/ex2/input > ~zacharynoll/c_lab/ex2/outputc
+cat ~shohami/c_lab/ex2/input | ./my_grep -c an | diff ~zacharynoll/c_lab/ex2/outputc -
+
+
+grep -v ucket ~shohami/c_lab/ex2/input > ~zacharynoll/c_lab/ex2/outputv
+cat ~shohami/c_lab/ex2/input | ./my_grep -v  ucket | diff ~zacharynoll/c_lab/ex2/outputv -
+
+
+grep -i nan ~shohami/c_lab/ex2/input > ~zacharynoll/c_lab/ex2/outputi
+cat ~shohami/c_lab/ex2/input | ./my_grep -i nan | diff ~zacharynoll/c_lab/ex2/outputi -
+
+
+grep -i -v Nan ~shohami/c_lab/ex2/input > ~zacharynoll/c_lab/ex2/outputiv
+cat ~shohami/c_lab/ex2/input | ./my_grep -i -v Nan | diff ~zacharynoll/c_lab/ex2/outputiv -
+
+
+grep -b an ~shohami/c_lab/ex2/input > ~zacharynoll/c_lab/ex2/outputb
+cat ~shohami/c_lab/ex2/input | ./my_grep -b an | diff ~zacharynoll/c_lab/ex2/outputb - 
+
+grep -n na ~shohami/c_lab/ex2/input > ~zacharynoll/c_lab/ex2/outputn
+cat ~shohami/c_lab/ex2/input | ./my_grep -n na | diff ~zacharynoll/c_lab/ex2/outputn - 
+
+
+grep -n -i -b -v  nAn ~shohami/c_lab/ex2/input > ~zacharynoll/c_lab/ex2/outputnibv
+cat ~shohami/c_lab/ex2/input | ./my_grep -n -i -b -v nAn | diff ~zacharynoll/c_lab/ex2/outputnibv - 
+
+grep -n -i -b An ~zacharynoll/c_lab/ex2/input > outputfilenib
+./my_grep -n -i -b An input | diff outputfilenib -
+
+
+grep -x  zach ~zacharynoll/c_lab/ex2/inputx > ~zacharynoll/c_lab/ex2/outputx
+cat ~zacharynoll/c_lab/ex2/inputx | ./my_grep -x zach | diff ~zacharynoll/c_lab/ex2/outputx - 
+
+grep -x -i  zach ~zacharynoll/c_lab/ex2/inputx > ~zacharynoll/c_lab/ex2/outputx
+cat ~zacharynoll/c_lab/ex2/inputx | ./my_grep -x -i zach | diff ~zacharynoll/c_lab/ex2/outputx - 
+
+grep -x -v  zach ~zacharynoll/c_lab/ex2/inputx > ~zacharynoll/c_lab/ex2/outputx
+cat ~zacharynoll/c_lab/ex2/inputx | ./my_grep -x -v zach | diff ~zacharynoll/c_lab/ex2/outputx - 
+
+grep -x -b -n  zach ~zacharynoll/c_lab/ex2/inputx > ~zacharynoll/c_lab/ex2/outputx
+cat ~zacharynoll/c_lab/ex2/inputx | ./my_grep -x -b -n zach | diff ~zacharynoll/c_lab/ex2/outputx - 
+
+grep -x -b -i -n zach ~zacharynoll/c_lab/ex2/inputx > ~zacharynoll/c_lab/ex2/outputx
+cat ~zacharynoll/c_lab/ex2/inputx | ./my_grep -x -b -i -n zach | diff ~zacharynoll/c_lab/ex2/outputx - 
+
+
+grep zach ~zacharynoll/c_lab/ex2/inputempty > ~zacharynoll/c_lab/ex2/outputempty
+cat ~zacharynoll/c_lab/ex2/inputempty | ./my_grep zach | diff ~zacharynoll/c_lab/ex2/outputempty - 
+
+grep "a.a" ~zacharynoll/c_lab/ex2/input > ~zacharynoll/c_lab/ex2/outputdot
+cat ~zacharynoll/c_lab/ex2/input | ./my_grep -E "a.a" | diff ~zacharynoll/c_lab/ex2/outputdot - 
+
+grep "[m-n]an" ~zacharynoll/c_lab/ex2/input > ~zacharynoll/c_lab/ex2/outputsqr
+cat ~zacharynoll/c_lab/ex2/input | ./my_grep -E "[m-n]an" | diff ~zacharynoll/c_lab/ex2/outputsqr - 
+
+
+grep "[a-z]ucket" ~zacharynoll/c_lab/ex2/input > ~zacharynoll/c_lab/ex2/outputsqr2
+cat ~zacharynoll/c_lab/ex2/input | ./my_grep -E "[a-z]ucket" | diff ~zacharynoll/c_lab/ex2/outputsqr2 - 
+
+
+grep "[a-z].cke[a-z]" ~zacharynoll/c_lab/ex2/input > ~zacharynoll/c_lab/ex2/outputsqr3
+cat ~zacharynoll/c_lab/ex2/input | ./my_grep -E "[a-z].cke[a-z]" | diff ~zacharynoll/c_lab/ex2/outputsqr3 - 
+
+
+
+chmod 755 *
+
+
+
+ 

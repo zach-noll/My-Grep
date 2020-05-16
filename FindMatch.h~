@@ -1,0 +1,14 @@
+#ifndef FINDMATCH_H
+#define FINDMATCH_H
+
+typedef struct {
+
+  enum exp_case expression_case;
+  char value;
+
+} Expression_t;
+
+void UpdateMatch(Expression_t *parsed_expression_array, struct in_flags *flags, char *text,
+                 Line_Params *text_parameters);
+
+#endif

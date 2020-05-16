@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+cp ~shohami/c_lab/ex2/main.c ~zacharynoll/c_lab/ex2/main.c
+cp ~shohami/c_lab/ex2/test.sh ~zacharynoll/c_lab/ex2/test.sh
