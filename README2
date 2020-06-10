@@ -1,7 +1,0 @@
-Usage:
-
-same as grep program, differences are:
-
-only usable flags - -i -n -b -v -x -A <number> -E <'[]','()','.'>
-
-E switch must be turned on for all regular expression searches
